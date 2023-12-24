@@ -5,6 +5,18 @@
  */ 
 public class Triangle {
 	public static void main(String[] args) {
-		// Put your code here	
+		
+		int FirstSIde = Integer.parseInt(args[0]);
+		int SecondSIde = Integer.parseInt(args[1]);
+		int ThirdSIde = Integer.parseInt(args[2]);
+		
+		boolean Check1 = ((FirstSIde + SecondSIde) > ThirdSIde);
+		boolean Check2 = ((FirstSIde + ThirdSIde) > SecondSIde);
+	    boolean Check3 = ((ThirdSIde + SecondSIde) > FirstSIde);
+		
+		boolean Final = (Check1 && Check2 && Check3);
+		
+		System.out.println(FirstSIde + ", " + SecondSIde + ", " + ThirdSIde + ": " + Final); 
+	
 	}
 }
